@@ -1,1 +1,27 @@
-
+{
+    “id”: “prosody”,
+    “kind”: “BuildConfig”,
+    “apiVersion”: “v1”,
+    “parameters”: {
+    “source” : {
+    “type” : “Git”,
+    “git” : {
+    “uri”: “git://github.com/stomaintree/prosody.git”
+    }
+    },
+    “strategy”: {
+    “type”: “STI”,
+    “stiStrategy”: {
+    “builderImage”: “stomaintree/prosody-01”
+    }
+    },
+    “output”: {
+    “imageTag”: “stomaintree/prosody:latest”,
+    “registry”: “172.121.17.1:5001”
+    },
+    },
+    “secret”: “secret101”,
+    “labels”: {
+    “name”: “prosody”
+    }
+}
